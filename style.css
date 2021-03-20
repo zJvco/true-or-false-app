@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: bgc-animation 5s ease alternate infinite;
+    background: linear-gradient(45deg, #5DADE2, #1ABC9C);
+    background-size: 300% 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    margin: 15px 0;
+}
+
+.inputs-container {
+    margin: 20px 0;
+}
+
+.inputs-container input {
+    width: 150px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 5px;
+    outline: none;
+    border: none;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.inputs-container input:focus {
+    outline: 1px solid #000;
+}
+
+.buttonVal-container {
+    margin: 20px 0;
+}
+
+.buttonVal-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.buttonVal-container button:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.result-container {
+    padding: 15px;
+    background-color: #FFF;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.result-container span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.warning-container {
+    position: absolute;
+    bottom: 0;
+    background-color: #E74C3C;
+    color: #FFF;
+    padding: 10px 20px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes bgc-animation {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-color: 100% 50%;
+    }
+}
